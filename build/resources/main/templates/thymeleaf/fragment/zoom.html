@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<div class="zoom" th:fragment="zoomFragment">
+    <th:block th:each="tag, status: ${tagList}">
+        <a th:href="'/post/tag/'+${tag.id}">
+            <div class="round-btn">
+                <div>[[${tag.tagName}]]</div>
+                <div>[[${tag.postTagList.size()}]]</div>
+            </div>
+        </a>
+    </th:block>
+    <a href="/tags">
+        <div class="round-btn">
+            <div>태그 더보기</div>
+        </div>
+    </a>
+</div>
+</html>

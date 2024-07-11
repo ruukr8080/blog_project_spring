@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <!-- config -->
+    <th:block th:replace="fragment/config :: configFragment"></th:block>
+    <body>
+        <!-- header -->
+        <th:block th:replace="fragment/header :: headerFragment"></th:block>
+        <!-- nav -->
+        <th:block th:replace="fragment/nav :: navFragment"></th:block>
+        <!-- rows -->
+        <th:block th:replace="fragment/rows :: rowsFragment"></th:block>
+        <!-- content -->
+        <th:block layout:fragment="content"></th:block>
+        <!-- zoom -->
+        <th:block th:replace="fragment/zoom :: zoomFragment"></th:block>
+        <!-- footer -->
+        <th:block th:replace="fragment/footer :: footerFragment"></th:block>
+    </body>
+    <!-- 컨텐츠 페이지의 js -->
+    <th:block layout:fragment="script"></th:block>
+</html>

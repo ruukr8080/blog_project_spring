@@ -45,4 +45,5 @@ public class Post extends BaseEntity  {
     @OneToMany(mappedBy="post",fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<PostTag> postTagList = new ArrayList<>();
 
+
 }
